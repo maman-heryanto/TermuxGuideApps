@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">TermuxGuideApps</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Termux Guide Apps</string>
+    <string name="nav_header_subtitle">Termux.Guide@akb2.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!--Nav Right -->
+    <string name="reting">Rate</string>
+    <string name="termuxapps">Termux Apps</string>
+    <string name="shere">Shere</string>
+    <string name="feedback">Feedback</string>
+
+    <!-- Nav Bar -->
+    <string name="menu1">Basic Commands</string>
+    <string name="menu2">Advance Commands</string>
+    <string name="menu3">Networking Commands</string>
+    <string name="menu4"> All Tools</string>
+
+
+    <string name="headmenu2">Application</string>
+    <string name="menu7">Termux Apps</string>
+
+    <string name="headmenu1">Communicate</string>
+    <string name="menu5">Share</string>
+    <string name="menu6">Feedback</string>
+
+    <string name="headmenu3">Login Page</string>
+    <string name="menu8">Login</string>
+
+    <string name="headmenu4">information</string>
+    <string name="menu9">About</string>
+    <!-- Splash Screen -->
+    <string name="sp1">Termux Guide Apps</string>
+
+    <!-- Home -->
+
+    <string name="h1">
+        <font size="10">Get IT ON</font>\n<font size="18">GOOGLE PLAY</font>
+    </string>
+    <string name="h2">
+        <font size="10">Get IT ON</font>\n<font size="18">F-Droid</font>
+    </string>
+    <string name="read">
+        <i><u>Read the wiki to learn more</u></i>
+    </string>
+    <string name="secure">
+        <b>Secure.</b> Access remote servers using the ssh client from OpenSSH.
+        Termux combines standard packages with accurate terminal emulation in a beautiful open source solution.
+    </string>
+    <string name="feature">
+        <b>Feature packed.</b> Take your pick between Bash, fish or Zsh and nano, Emacs or Vim. Grep through your SMS inbox.
+        Access API endpoints with curl and use rsync to store backups of your contact list on a remote server.
+    </string>
+    <string name="Customizable">
+        <b>Customizable.</b>. Install what you want through the APT package management system known from Debian and Ubuntu GNU/Linux.
+        Why not start with installing Git and syncing your dotfiles?
+    </string>
+    <string name="explorable">
+        <b>Explorable.</b> Install what you want through the APT package management system known from Debian and Ubuntu GNU/Linux.
+        Why not start with installing Git and syncing your dotfiles?
+    </string>
+    <string name="With">
+        <b>With batteries included.</b>  Can you imagine a more powerful yet elegant pocket calculator than a
+        readline-powered Python console? Up-to-date versions of Perl, Python, Ruby and Node.js are all available.
+    </string>
+    <string name="Ready">
+        <b>With batteries included.</b> Connect a Bluetooth keyboard and hook up your
+        device to an external display if you need to - Termux supports keyboard shortcuts and has full mouse support.
+    </string>
+    <string name="Tinkerable">
+        <b>Tinkerable.</b> Develop by compiling C files with Clang and build your own
+        projects with CMake and pkg-config. Both GDB and strace are available if you get stuck and need to debug.
+    </string>
+
+    <!-- note -->
+    <string name="action_settings">Settings</string>
+
+
+    <!-- content Basic -->
+    <string name="content_basic">
+
+        <font color="#09c6df">Change current directory to parent directory : \n\n</font>
+        <font color="#000000"><b>cd \n</b></font>
+        <font color="#09c6df">used to change directory \n\n</font>
+        <font color="#000000"><b>cd / \n</b></font>
+        <font color="#09c6df">used to root directory \n\n</font>
+        <font color="#000000"><b>cd .. \n</b></font>
+        <font color="#09c6df">change current directory to parent directory \n\n</font>
+        <font color="#000000"><b>cd - \n</b></font>
+        <font color="#09c6df">move one directory back from where you are now \n\n</font>
+        <font color="#000000"><b>cp -r \n</b></font>
+        <font color="#09c6df">used to copy any directory \n\n</font>
+        <font color="#000000"><b>cp -f \n</b></font>
+        <font color="#09c6df">force copy by removing the destination files if needed \n\n</font>
+        <font color="#000000"><b>mv -f \n</b></font>
+        <font color="#09c6df">to move any directory \n\n</font>
+        <font color="#000000"><b>mv [file1 name][new file2 name] \n</b></font>
+        <font color="#09c6df">to rename files file 1 renames to file2 \n\n </font>
+        <font color="#000000"><b>ls -f \n</b></font>
+        <font color="#09c6df">list current folder contents \n\n</font>
+        <font color="#000000"><b>ls -l \n</b></font>
+        <font color="#09c6df">to show files/directory size,modified,date,time,time,owner of file,permissions  \n\n</font>
+        <font color="#000000"><b>ls -a \n</b></font>
+        <font color="#09c6df">list all files including hidden files.  \n\n</font>
+        <font color="#000000"><b>ls -lh \n</b></font>
+        <font color="#09c6df">it shows size of files in human readable format \n\n</font>
+        <font color="#000000"><b>ls -R \n</b></font>
+        <font color="#09c6df">shows recursively list of sub-directories \n\n</font>
+        <font color="#000000"><b>cat [file] \n</b></font>
+        <font color="#09c6df">to display file information \n\n</font>
+        <font color="#000000"><b>nano [file] \n</b></font>
+        <font color="#09c6df">to display and edit files \n\n</font>
+        <font color="#000000"><b>chmod +x[files] \n</b></font>
+        <font color="#09c6df">used to executable permission to a file \n\n</font>
+        <font color="#000000"><b>chmod +x* \n</b></font>
+        <font color="#09c6df">to give executable permission to all files \n\n</font>
+        <font color="#000000"><b>touch [file name] \n</b></font>
+        <font color="#09c6df">to create a file, like file.txt \n\n</font>
+        <font color="#000000"><b>mkdir [name] \n</b></font>
+        <font color="#09c6df">used to create folder / directory \n\n</font>
+        <font color="#000000"><b>wget \n</b></font>
+        <font color="#09c6df">this command used to download any file from online source like github \n\n</font>
+        <font color="#000000"><b>git clone [github url] \n</b></font>
+        <font color="#09c6df">used clone any repository from github \n\n</font>
+        <font color="#000000"><b>rm [file] \n</b></font>
+        <font color="#09c6df">used to remove / delete any files. \n\n</font>
+        <font color="#000000"><b>fm -rf [directory] \n</b></font>
+        <font color="#09c6df">used to remove / delete any directory. \n\n</font>
+        <font color="#000000"><b>clear \n</b></font>
+        <font color="#09c6df">to clear all the task on a terminal; means clear terminal \n\n</font>
+        <font color="#000000"><b>curl -L0 [url] \n</b></font>
+        <font color="#09c6df">to download any tool/script from sites \n\n</font>
+        <font color="#000000"><b>uname -m \n</b></font>
+        <font color="#09c6df">used to find the architecture of your device \n\n</font>
+        <font color="#000000"><b>apt install [package name] \n</b></font>
+        <font color="#000000"><b>pkg install [package name] \n</b></font>
+        <font color="#09c6df">to install any package \n\n</font>
+        <font color="#000000"><b>apt update \n</b></font>
+        <font color="#09c6df">to update your repository \n\n</font>
+        <font color="#000000"><b>apt upgrade \n</b></font>
+        <font color="#09c6df">to upgrate your repository \n\n</font>
+        <font color="#000000"><b>apt remove [package name] \n</b></font>
+        <font color="#09c6df">to remove any package\n\n</font>
+
+    </string>
+    <string name="title_activity_edit_note">EditNote</string>
+
+    <!-- content Advance -->
+
+</resources>

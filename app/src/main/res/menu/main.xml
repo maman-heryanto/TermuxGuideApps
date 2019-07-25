@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/termuxapps"
+        android:orderInCategory="100"
+        android:title="@string/termuxapps"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/rate"
+        android:orderInCategory="100"
+        android:title="@string/reting"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/shere"
+        android:orderInCategory="100"
+        android:title="@string/shere"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/feedback"
+        android:orderInCategory="100"
+        android:title="@string/feedback"
+        app:showAsAction="never" />
+
+
+</menu>

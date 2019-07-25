@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_basic"
+            android:icon="@drawable/ic_nav_code"
+            android:title="@string/menu1" />
+        <item
+            android:id="@+id/nav_advance"
+            android:icon="@drawable/ic_nav_code"
+            android:title="@string/menu2" />
+        <item
+            android:id="@+id/nav_network"
+            android:icon="@drawable/ic_nav_network"
+            android:title="@string/menu3" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_tools"
+            android:title="@string/menu4" />
+    </group>
+
+
+    <item android:title="@string/headmenu2">
+        <menu>
+            <item
+                android:id="@+id/nav_infotermux"
+                android:icon="@drawable/ic_termux"
+                android:title="@string/menu7" />
+        </menu>
+    </item>
+
+    <item android:title="@string/headmenu1">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu5" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu6" />
+        </menu>
+    </item>
+
+
+    <item android:title="@string/headmenu4">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_information"
+                android:title="@string/menu9" />
+        </menu>
+    </item>
+
+</menu>

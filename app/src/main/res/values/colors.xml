@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- mnifa89 -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#292B3D</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="colorGrayLight">#FAFAFA</color>
+    <color name="colorStartBlue">#09c6df</color>
+    <color name="colorEnd">#0BCCE6</color>
+
+    <color name="colorBlue">#07b5b7</color>
+    <color name="colorBlueDeep">#04335e</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorTransparant">#80FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="bluecyan">#19acfc</color>
+
+    <color name="colorPriMaterial">#FFC107</color>
+    <color name="colorPriDarkMaterial">#FFA000</color>
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="yello">#ffb300</color>
+    <color name="green">#00bfa5</color>
+    <color name="darkblue">#23283a</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fe104d</color>
+
+    <color name="purple_500">#9c27b0</color>
+    <color name="deep_purple">#673ab7</color>
+    <color name="indigo_500">#3f51b5</color>
+    <color name="blue_500">#2196f3</color>
+    <color name="cyan_500">#00bcd4</color>
+    <color name="light_blue_500">#03a9f4</color>
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CostumDialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#292B3D"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_information"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Termux Guide Apps"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Develop by Maman Heryanto"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AKB-2"
+
+            android:textColor="@color/colorWhite"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtVersi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Versi Aplikasi :" />
+
+            <TextView
+                android:id="@+id/txtVersi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@id/txtVersi"
+                android:gravity="center_horizontal"
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/login_bg"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Close" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
