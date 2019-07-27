@@ -7,15 +7,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:theme="@style/AppTheme"
-    tools:context=".NoteActivity">
+    tools:context="com.t.termuxgapps.NoteActivity_app">
 
-
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@drawable/nav_black">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ic_back"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorWhite"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,17 +36,22 @@
 
         <ImageView
             android:id="@+id/btnAddNoteApp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/nav_note_add"
-            android:layout_gravity="end"
-            android:layout_marginStart="300dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/note_add"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/colorWhite"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
-    <include layout="@layout/content_note_app" />
+    <ListView
+        android:id="@+id/lvCatatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+    </ListView>
 
 
 </LinearLayout>
