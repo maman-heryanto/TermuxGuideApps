@@ -1,10 +1,13 @@
 package com.t.termuxgapps;
 
+
+import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -27,6 +30,11 @@ public class MainAbout extends Fragment {
         view = (RelativeLayout) inflater.inflate(R.layout.main_about, container, false);
         getActivity().setTitle("About");
 
+        //fab hide
+        FloatingActionButton floatingActionButton = ((MainActivity) getActivity()).getFloatingActionButton();
+        if (floatingActionButton != null) {
+            floatingActionButton.hide();
+        }
 
         CardView about = (CardView) view.findViewById(R.id.about);
         about.setOnClickListener(new View.OnClickListener() {
@@ -35,14 +43,15 @@ public class MainAbout extends Fragment {
                 goToDialog();
             }
             private void goToDialog() {
-                // FragmentTransaction ft = getFragmentManager().beginTransaction();
-                // Fragment prev = getFragmentManager().findFragmentByTag("CostumDialog");
-                // if (prev != null) {
-                //   ft.remove(prev);
-                // }
-                // ft.addToBackStack(null);
-                //  DialogFragment dialogFragment = new CostumDialog();
-                //  dialogFragment.show(ft,"CostumDialog");
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+                DialogFragment dialogFragment = new CostumDialog();
+                //dialogFragment.show(ft,"dialog");
+
             }
         });
 

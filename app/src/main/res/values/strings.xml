@@ -77,7 +77,13 @@
     <!-- note -->
     <string name="action_settings">Settings</string>
     <string name="title_activity_edit_note">EditNote</string>
+    <string name="dialog">dialog</string>
 
     <!-- content Advance -->
+    <string name="discuss">Ini adalah Forum diskusi untuk pengguna Termux Guide Apps untuk saling bertukar pikiran</string>
+
+    <string name="Loading">Loading Lama? Mohon Tunggu!(sedang perbaikan)</string>
+
+
 
 </resources>

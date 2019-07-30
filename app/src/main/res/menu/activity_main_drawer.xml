@@ -45,6 +45,14 @@
         </menu>
     </item>
 
+    <item android:title="@string/headmenu4">
+        <menu>
+            <item
+                android:id="@+id/nav_discuss"
+                android:icon="@drawable/ic_information"
+                android:title="Discussion" />
+        </menu>
+    </item>
 
     <item android:title="@string/headmenu4">
         <menu>

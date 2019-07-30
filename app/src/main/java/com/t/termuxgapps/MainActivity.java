@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity
     NavigationView navigationView;
     FragmentManager fragmentManager;
     Fragment fragment = null;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +52,6 @@ public class MainActivity extends AppCompatActivity
 
 
         });
-
 
         drawer = (  DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -146,6 +147,11 @@ public class MainActivity extends AppCompatActivity
             fragment = new MainHome();
             callFragment(fragment);
 
+        } else if (id == R.id.nav_discuss) {
+            fragment = new MainDiscussion();
+            callFragment(fragment);
+
+
         } else if (id == R.id.nav_about) {
             fragment = new MainAbout();
             callFragment(fragment);
@@ -164,13 +170,13 @@ public class MainActivity extends AppCompatActivity
             intent.setData(Uri.parse("mailto:mnifa8916a@gmail.com"));
             startActivity(intent);
             return true;
-
         }
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
     // untuk mengganti isi kontainer menu yang dipiih
     private void callFragment(Fragment fragment) {
@@ -180,5 +186,8 @@ public class MainActivity extends AppCompatActivity
                 .commit();
     }
 
-
+    // getter FloatingActionButton
+    public FloatingActionButton getFloatingActionButton() {
+        return fab;
+    }
 }

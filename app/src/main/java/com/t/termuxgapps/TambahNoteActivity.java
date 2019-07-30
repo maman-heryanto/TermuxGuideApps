@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.t.termuxgapps.helper.DbAdapterNote;
@@ -19,14 +18,10 @@ public class TambahNoteActivity extends Activity {
 
     private EditText txtJudul, txtCatatan;
     private Button btnSimpan;
-    private Spinner spWarna;
 
     private boolean isEdit = false;
     private int id = 0;
-    //array pilihan warna yang tersedia
-    private String[] warna = { "kuning", "merah", "biru",
-            "hijau", "Abu-Abu" };
-    private int warnaDipilih;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +37,11 @@ public class TambahNoteActivity extends Activity {
             String judul = getIntent().getExtras().getString("judul");
             String isi = getIntent().getExtras().getString("isi");
             id = getIntent().getExtras().getInt("id");
-            warnaDipilih = getIntent().getExtras().getInt("warna");
+
 
             txtJudul.setText(judul);
             txtCatatan.setText(isi);
 
-            spWarna.setSelection(warnaDipilih);
         }
     }
 
@@ -64,27 +58,6 @@ public class TambahNoteActivity extends Activity {
             }
         });
 
-        spWarna = (Spinner) findViewById(R.id.spWarna);
-        //buat adapter untuk spinner warna
-        ArrayAdapter adapter = new ArrayAdapter(getBaseContext(),
-                android.R.layout.simple_spinner_item, warna);
-        adapter.setDropDownViewResource(android.R.layout.
-                simple_spinner_dropdown_item);
-
-        //masukkan adapter ke spinner
-        spWarna.setAdapter(adapter);
-        //event saat spinner dipilih
-        spWarna.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long arg03) {
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
     }
 
         protected void simpan() {
@@ -105,7 +78,6 @@ public class TambahNoteActivity extends Activity {
                 Note_app c = new Note_app();
                 c.setTitle(txtJudul.getText().toString());
                 c.setIsi(txtCatatan.getText().toString());
-                c.setWarna(warnaDipilih);
                 boolean hasil = false;
                 if (isEdit) {
                     //jika statenya edit maka update data

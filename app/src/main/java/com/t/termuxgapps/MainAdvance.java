@@ -3,6 +3,7 @@ package com.t.termuxgapps;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -36,6 +37,12 @@ public class MainAdvance extends Fragment {
 
         view = (RelativeLayout) inflater.inflate(R.layout.main_advance, container, false);
         getActivity().setTitle("Advance Commands");
+
+        //fab show
+        FloatingActionButton floatingActionButton = ((MainActivity) getActivity()).getFloatingActionButton();
+        if (floatingActionButton != null) {
+            floatingActionButton.show();
+        }
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("advance");
         mDatabase.keepSynced(true);

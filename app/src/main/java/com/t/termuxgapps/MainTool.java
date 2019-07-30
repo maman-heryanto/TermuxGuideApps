@@ -3,6 +3,7 @@ package com.t.termuxgapps;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -37,6 +38,12 @@ public class MainTool extends Fragment {
 
         view = (RelativeLayout) inflater.inflate(R.layout.main_tool, container, false);
         getActivity().setTitle("All Tools Termux");
+
+        //fab show
+        FloatingActionButton floatingActionButton = ((MainActivity) getActivity()).getFloatingActionButton();
+        if (floatingActionButton != null) {
+            floatingActionButton.show();
+        }
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("tools");
         mDatabase.keepSynced(true);

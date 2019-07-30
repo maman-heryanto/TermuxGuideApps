@@ -2,6 +2,7 @@ package com.t.termuxgapps;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -29,6 +30,12 @@ public class MainBasic extends Fragment {
 
         view = (RelativeLayout) inflater.inflate(R.layout.main_basic, container, false);
         getActivity().setTitle("Basic Commands");
+
+        //fab show
+        FloatingActionButton floatingActionButton = ((MainActivity) getActivity()).getFloatingActionButton();
+        if (floatingActionButton != null) {
+            floatingActionButton.show();
+        }
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("basic");
         mDatabase.keepSynced(true);

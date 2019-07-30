@@ -55,7 +55,7 @@ public class NoteActivity_app extends Activity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(NoteActivity_app.this, TambahNoteActivity.class);
+                Intent i = new Intent(NoteActivity_app.this, MainActivity.class);
                 startActivity(i);
             }
 
@@ -141,7 +141,6 @@ public class NoteActivity_app extends Activity {
                         i.putExtra("judul", c.getTitle());
                         i.putExtra("isi", c.getIsi());
                         i.putExtra("tanggal", c.getTanggal());
-                        i.putExtra("warna", c.getWarna());
                         startActivity(i);
                         break;
                     case 1:
@@ -201,8 +200,6 @@ public class NoteActivity_app extends Activity {
                         .getColumnIndexOrThrow(DbAdapterNote.ISI_CATATAN))));
                 c.setTanggal((cur.getString(cur
                         .getColumnIndexOrThrow(DbAdapterNote.TANGGAL_CATATAN))));
-                c.setWarna((cur.getInt(cur
-                        .getColumnIndexOrThrow(DbAdapterNote.WARNA_CATATAN))));
                 //tambahkan ke arraylist dataCatatan
                 dataCatatan.add(c);
                 cur.moveToNext();
@@ -260,14 +257,6 @@ public class NoteActivity_app extends Activity {
             //set warna backgroud listview sesuai warna yang dipilih
             if (color == 0) {
                 vi.setBackgroundColor(Color.parseColor("#ffff00"));
-            } else if (color == 1) {
-                vi.setBackgroundColor(Color.parseColor("#FF0000"));
-            } else if (color == 2) {
-                vi.setBackgroundColor(Color.parseColor("#0000FF"));
-            } else if (color == 3) {
-                vi.setBackgroundColor(Color.parseColor("#00FF00"));
-            } else if (color == 4) {
-                vi.setBackgroundColor(Color.parseColor("#808080"));
             }
 
             return vi;

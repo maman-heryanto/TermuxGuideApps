@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,13 @@ public class MainHome extends Fragment {
 
         view = (RelativeLayout) inflater.inflate(R.layout.main_home, container, false);
         getActivity().setTitle("Termux Apps");
+
+        //fab hide
+        FloatingActionButton floatingActionButton = ((MainActivity) getActivity()).getFloatingActionButton();
+        if (floatingActionButton != null) {
+            floatingActionButton.hide();
+        }
+
 
         JustifiedTextView myMsg = (JustifiedTextView) view.findViewById(R.id.t1);
         myMsg.setText("Termux is an Android terminal emulator and Linux environment app that " +
@@ -58,6 +66,19 @@ public class MainHome extends Fragment {
 
             private void goToFdroid() {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://f-droid.org/packages/com.termux/"));
+                startActivity(browserIntent);
+            }
+        });
+
+        TextView wikipedia = (TextView) view.findViewById(R.id.wiki);
+        wikipedia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToWikipedia();
+            }
+
+            private void goToWikipedia() {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://wiki.termux.com/wiki/Main_Page"));
                 startActivity(browserIntent);
             }
         });
