@@ -20,6 +20,10 @@
             android:id="@+id/nav_tools"
             android:icon="@drawable/ic_tools"
             android:title="@string/menu4" />
+        <item
+            android:id="@+id/nav_ref"
+            android:icon="@drawable/ic_tools"
+            android:title="Refensi Tools Github" />
     </group>
 
 
@@ -45,7 +49,7 @@
         </menu>
     </item>
 
-    <item android:title="@string/headmenu4">
+    <item android:title="Sharing">
         <menu>
             <item
                 android:id="@+id/nav_discuss"

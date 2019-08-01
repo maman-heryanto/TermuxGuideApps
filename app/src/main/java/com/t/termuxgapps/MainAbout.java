@@ -1,20 +1,27 @@
 package com.t.termuxgapps;
 
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
+
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import android.support.v4.app.DialogFragment;
+import android.widget.TextView;
+import android.widget.Toast;
+
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -36,22 +43,21 @@ public class MainAbout extends Fragment {
             floatingActionButton.hide();
         }
 
+
         CardView about = (CardView) view.findViewById(R.id.about);
         about.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceType")
             @Override
             public void onClick(View v) {
-                goToDialog();
-            }
-            private void goToDialog() {
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
-                if (prev != null) {
-                    ft.remove(prev);
-                }
-                ft.addToBackStack(null);
-                DialogFragment dialogFragment = new CostumDialog();
-                //dialogFragment.show(ft,"dialog");
 
+                Dialog dialog = new Dialog(getActivity());
+                dialog.setCancelable(true);
+
+                View view  = getActivity().getLayoutInflater().inflate(R.layout.layout_costum_dialog, null);
+                dialog.setContentView(view);
+
+
+                dialog.show();
             }
         });
 

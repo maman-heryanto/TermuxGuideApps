@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity
     FragmentManager fragmentManager;
     Fragment fragment = null;
     FloatingActionButton fab;
+    FloatingActionButton test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement nav right
         if (id == R.id.rate) {
-            Toast.makeText(getApplicationContext(), "Tombol RATE ***********", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "ComingSoon !!!", Toast.LENGTH_SHORT).show();
         }
         else if (id == R.id.termuxapps) {
             fragment = new MainHome();
@@ -106,8 +107,8 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.shere) {
             Intent myIntent = new Intent(Intent.ACTION_SEND);
             myIntent.setType("text/plain");
-            String shareBody = "Your body is here";
-            String shareSub = "Your subject";
+            String shareBody = "Download Termux Guide Apps Di Playstore";
+            String shareSub = "TermuxGuideApps";
             myIntent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
             myIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(myIntent, "Share using"));
@@ -133,14 +134,21 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_basic) {
             fragment = new MainBasic();
             callFragment(fragment);
+
         } else if (id == R.id.nav_advance) {
             fragment = new MainAdvance();
             callFragment(fragment);
+
         } else if (id == R.id.nav_network) {
             fragment = new  MainNetworking();
             callFragment(fragment);
+
         } else if (id == R.id.nav_tools) {
             fragment = new MainTool();
+            callFragment(fragment);
+
+        } else if (id == R.id.nav_ref) {
+            fragment = new MainRef();
             callFragment(fragment);
 
         } else if (id == R.id.nav_infotermux) {

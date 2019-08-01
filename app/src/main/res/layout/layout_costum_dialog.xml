@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:layout_height="wrap_content"
     tools:context=".CostumDialog">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
         android:layout_gravity="center_horizontal"
@@ -18,8 +19,12 @@
 
 
         <ImageView
+            android:layout_marginTop="20dp"
+            android:paddingTop="10dp"
+            android:id="@+id/dialog_logo"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:tint="@color/colorWhite"
             android:src="@drawable/ic_information"/>
 
         <TextView
@@ -36,15 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Develop by Maman Heryanto"
-            android:textColor="@color/colorWhite"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AKB-2"
-
             android:textColor="@color/colorWhite"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
